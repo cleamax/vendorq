@@ -1,40 +1,40 @@
-# VendorQ
+<<<<<<< HEAD
+# vendorq
+=======
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-VendorQ is a focused B2B tool for SaaS companies that need to answer enterprise security questionnaires without slowing down sales.
+## Getting Started
 
-It helps teams reuse consistent, source-backed security answers across customer reviews.
+First, run the development server:
 
-## What VendorQ does
-
-- Centralizes approved security questionnaire answers
-- Keeps answers consistent across customers and reviewers
-- Links each answer to a clear internal policy or source
-- Reduces back-and-forth during enterprise security reviews
-
-## What VendorQ is not
-
-VendorQ is intentionally narrow.
-
-- Not a full GRC platform
-- Not a continuous compliance or monitoring tool
-- Not an audit management system
-
-If you are looking for end-to-end compliance automation, VendorQ is not the right product.
-
-## Development
-
-This repository contains the VendorQ application.
-
-Install dependencies:
-npm install
-
-Run locally:
+```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Then open:
-http://localhost:3000
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Notes
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-VendorQ is designed for clarity, trust, and enterprise security review workflows.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+>>>>>>> 74b611c (init nextjs)
