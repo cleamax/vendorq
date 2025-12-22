@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "Pricing | VendorQ",
     description:
-        "Enterprise-ready pricing for answering security questionnaires faster with consistent, source-backed responses.",
+        "Pilot-friendly pricing for SaaS teams selling to enterprise customers who need consistent, source-backed security questionnaire answers.",
 };
 
 export default function PricingPage() {
@@ -24,6 +24,10 @@ export default function PricingPage() {
                         All plans include policy uploads, evidence-backed answers, and
                         export-ready outputs.
                     </p>
+                    <p className="mt-3 text-sm text-zinc-500">
+                        Early-stage pricing designed for pilot evaluations. If VendorQ is not
+                        a fit, we’ll tell you directly.
+                    </p>
                 </div>
             </section>
 
@@ -38,7 +42,11 @@ export default function PricingPage() {
                                 For early-stage SaaS and founder-led sales.
                             </p>
                             <p className="mt-4 text-3xl font-semibold text-zinc-900">
-                                €129<span className="text-base font-normal text-zinc-600"> / month</span>
+                                €129
+                                <span className="text-base font-normal text-zinc-600">
+                                    {" "}
+                                    / month
+                                </span>
                             </p>
                         </div>
 
@@ -52,10 +60,10 @@ export default function PricingPage() {
 
                         <div className="mt-6">
                             <Link
-                                href="/login"
+                                href="/contact"
                                 className="inline-flex w-full items-center justify-center rounded-md border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-50"
                             >
-                                Start Starter
+                                Run a pilot security questionnaire
                             </Link>
                         </div>
                     </div>
@@ -72,7 +80,11 @@ export default function PricingPage() {
                                 For teams running multiple enterprise deals.
                             </p>
                             <p className="mt-4 text-3xl font-semibold text-zinc-900">
-                                €349<span className="text-base font-normal text-zinc-600"> / month</span>
+                                €349
+                                <span className="text-base font-normal text-zinc-600">
+                                    {" "}
+                                    / month
+                                </span>
                             </p>
                         </div>
 
@@ -86,10 +98,10 @@ export default function PricingPage() {
 
                         <div className="mt-6">
                             <Link
-                                href="/login"
+                                href="/contact"
                                 className="inline-flex w-full items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
                             >
-                                Start Team
+                                Run a pilot security questionnaire
                             </Link>
                         </div>
                     </div>
@@ -119,9 +131,14 @@ export default function PricingPage() {
                                 href="/contact"
                                 className="inline-flex w-full items-center justify-center rounded-md border border-zinc-300 px-4 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-100"
                             >
-                                Contact sales
+                                Run a pilot security questionnaire
                             </Link>
                         </div>
+
+                        <p className="mt-3 text-xs leading-5 text-zinc-500">
+                            Enterprise plans are discussed case-by-case. No long implementation
+                            cycles.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -133,7 +150,7 @@ export default function PricingPage() {
                         How billing works
                     </h2>
                     <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-700">
-                        <li>• Monthly subscription, billed in advance</li>
+                        <li>• Monthly subscription</li>
                         <li>• Cancel anytime</li>
                         <li>• Usage is counted per questionnaire</li>
                         <li>• Re-exporting the same questionnaire does not count twice</li>
@@ -149,9 +166,9 @@ export default function PricingPage() {
                         Where you get value
                     </h2>
                     <p className="mt-3 text-sm leading-6 text-zinc-600">
-                        Most teams try VendorQ on a real security questionnaire. The value
-                        becomes clear when you export a reviewer-ready file with consistent
-                        answers and exact policy references.
+                        Most teams evaluate VendorQ on a real security questionnaire. The
+                        value becomes clear when you export a reviewer-ready file with
+                        consistent answers and exact policy references.
                     </p>
                 </div>
             </section>
@@ -167,9 +184,9 @@ export default function PricingPage() {
                                 Is VendorQ a GRC platform?
                             </p>
                             <p className="mt-2 text-sm text-zinc-600">
-                                No. VendorQ is intentionally narrow and focused on answering
-                                security questionnaires. It is not a full GRC or compliance
-                                management platform.
+                                No. VendorQ is intentionally focused on answering security
+                                questionnaires. It is not a full GRC or compliance management
+                                platform.
                             </p>
                         </div>
 
@@ -178,8 +195,7 @@ export default function PricingPage() {
                                 Do you use our data to train models?
                             </p>
                             <p className="mt-2 text-sm text-zinc-600">
-                                No. Your data is stored privately and is never used for training
-                                models.
+                                No. Your data is stored privately and is not used for training.
                             </p>
                         </div>
 
@@ -198,7 +214,7 @@ export default function PricingPage() {
                             </p>
                             <p className="mt-2 text-sm text-zinc-600">
                                 A questionnaire is a single customer-provided security review
-                                document, regardless of length or format.
+                                document (spreadsheet or document), regardless of length.
                             </p>
                         </div>
 
@@ -207,9 +223,8 @@ export default function PricingPage() {
                                 Do you support SOC 2 or ISO 27001 formats?
                             </p>
                             <p className="mt-2 text-sm text-zinc-600">
-                                VendorQ works with common security questionnaire documents
-                                (Excel, Word, PDF). Support for specific frameworks will expand
-                                over time.
+                                VendorQ works with common questionnaire formats (Excel, Word,
+                                PDF). Framework-specific workflows may be added later.
                             </p>
                         </div>
                     </div>

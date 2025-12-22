@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "How VendorQ works | VendorQ",
     description:
-        "A practical walkthrough of how VendorQ helps SaaS teams answer enterprise security questionnaires.",
+        "A practical walkthrough of how VendorQ fits into real enterprise security questionnaire workflows.",
 };
 
 export default function HowItWorksPage() {
@@ -17,12 +17,12 @@ export default function HowItWorksPage() {
                         How VendorQ works
                     </h1>
                     <p className="mt-4 text-base leading-7 text-zinc-600">
-                        VendorQ helps teams answer security questionnaires by reusing
-                        consistent, source-backed answers.
+                        VendorQ helps SaaS teams answer enterprise security questionnaires by
+                        reusing consistent, source-backed answers.
                     </p>
-                    <p className="mt-4 text-sm leading-6 text-zinc-600">
-                        VendorQ fits into late-stage sales workflows where security reviews
-                        can slow deals down. It supports humans doing the work — it does not
+                    <p className="mt-4 max-w-prose text-sm leading-6 text-zinc-600">
+                        It fits into late-stage sales workflows where security reviews slow
+                        deals down. VendorQ supports people doing the work — it does not
                         replace ownership or judgment.
                     </p>
                 </div>
@@ -36,20 +36,17 @@ export default function HowItWorksPage() {
                     </h2>
 
                     <div className="mt-6 grid gap-4 sm:grid-cols-4">
-                        {[
-                            "Upload",
-                            "Answer",
-                            "Review",
-                            "Export",
-                        ].map((step, idx) => (
+                        {["Upload", "Reuse answers", "Review", "Export"].map((step, idx) => (
                             <div
                                 key={step}
-                                className="rounded-lg border border-zinc-200 bg-white p-4 text-sm text-zinc-700"
+                                className="rounded-lg border border-zinc-200 bg-white p-4"
                             >
                                 <p className="text-xs font-medium text-zinc-500">
                                     Step {idx + 1}
                                 </p>
-                                <p className="mt-1 font-medium text-zinc-900">{step}</p>
+                                <p className="mt-1 text-sm font-medium text-zinc-900">
+                                    {step}
+                                </p>
                             </div>
                         ))}
                     </div>
@@ -67,14 +64,14 @@ export default function HowItWorksPage() {
                     <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-700">
                         <li>• Upload internal security policies and documentation</li>
                         <li>• Add customer-provided questionnaires</li>
-                        <li>• Include supporting evidence if needed</li>
+                        <li>• Include supporting material where needed</li>
                         <li>• Files remain private and isolated to your account</li>
                     </ul>
 
                     <p className="mt-4 text-sm text-zinc-600">
                         <span className="font-medium text-zinc-900">What this solves:</span>{" "}
-                        no more searching through old folders or past deals to find the
-                        right document.
+                        no more searching through old folders or past deals to find the right
+                        document.
                     </p>
                 </div>
             </section>
@@ -91,7 +88,7 @@ export default function HowItWorksPage() {
                         <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-700">
                             <li>• Write answers once instead of per customer</li>
                             <li>• Link each answer to a specific policy or source</li>
-                            <li>• Reuse answers across multiple questionnaires</li>
+                            <li>• Reuse answers across questionnaires</li>
                         </ul>
 
                         <p className="mt-4 text-sm text-zinc-600">
@@ -111,8 +108,8 @@ export default function HowItWorksPage() {
                     </h2>
 
                     <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-700">
-                        <li>• AI can assist with drafting responses where helpful</li>
-                        <li>• Humans review and edit every answer</li>
+                        <li>• Draft assistance can be used where helpful</li>
+                        <li>• Every answer is reviewed and edited by your team</li>
                         <li>• Sources remain visible for each response</li>
                     </ul>
 
@@ -154,8 +151,8 @@ export default function HowItWorksPage() {
                             VendorQ helps with
                         </h2>
                         <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-700">
-                            <li>• Answering security questionnaires faster</li>
-                            <li>• Maintaining consistent responses across customers</li>
+                            <li>• Answering security questionnaires</li>
+                            <li>• Keeping responses consistent across customers</li>
                             <li>• Linking answers to internal sources</li>
                             <li>• Reducing manual work during sales cycles</li>
                         </ul>
@@ -203,16 +200,16 @@ export default function HowItWorksPage() {
                         Clear answers, fewer delays
                     </h2>
                     <p className="mt-3 text-sm leading-6 text-zinc-600">
-                        VendorQ is designed to make security reviews predictable and easier
-                        to manage — without adding unnecessary process.
+                        VendorQ is designed to make security reviews more predictable without
+                        adding unnecessary process.
                     </p>
 
                     <div className="mt-6">
                         <Link
-                            href="/pricing"
+                            href="/contact"
                             className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
                         >
-                            See pricing
+                            Run a pilot security questionnaire
                         </Link>
                     </div>
                 </div>

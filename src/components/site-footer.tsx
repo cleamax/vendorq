@@ -8,15 +8,13 @@ export function SiteFooter() {
                     <div>
                         <p className="text-sm font-semibold text-zinc-900">VendorQ</p>
                         <p className="mt-1 max-w-sm text-xs leading-5 text-zinc-500">
-                            VendorQ helps SaaS teams answer enterprise security questionnaires
-                            with consistent, source-backed responses.
+                            VendorQ helps SaaS teams selling to enterprise customers reduce time
+                            spent on security questionnaires with consistent, source-backed
+                            answers.
                         </p>
                     </div>
 
-                    <nav
-                        className="flex flex-wrap gap-x-6 gap-y-2 text-sm"
-                        aria-label="Footer navigation"
-                    >
+                    <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Footer navigation">
                         <Link href="/how-it-works" className="text-zinc-600 hover:text-zinc-900">
                             How it works
                         </Link>

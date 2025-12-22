@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Contact | VendorQ",
     description:
-        "Get in touch with VendorQ. Exploratory conversations about security questionnaires and sales workflows.",
+        "Discuss a real enterprise security questionnaire and evaluate whether VendorQ fits your sales workflow.",
 };
 
 export default function ContactPage() {
@@ -16,15 +16,16 @@ export default function ContactPage() {
                         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
                             Contact
                         </h1>
+
                         <p className="mt-4 text-base leading-7 text-zinc-600">
-                            Get in touch if security questionnaires are slowing down your sales
-                            process.
+                            Get in touch if enterprise security questionnaires are slowing down
+                            your sales process.
                         </p>
 
-                        <p className="mt-4 text-sm leading-6 text-zinc-600 max-w-prose">
-                            VendorQ is an early-stage product. Conversations are exploratory
-                            and focused on understanding whether there is a real fit — not on
-                            pitching or pressure.
+                        <p className="mt-4 max-w-prose text-sm leading-6 text-zinc-600">
+                            VendorQ is an early-stage product. Conversations are exploratory and
+                            focused on discussing a real questionnaire and understanding fit —
+                            not on sales pressure or demos.
                         </p>
 
                         {/* When it makes sense */}
@@ -33,22 +34,33 @@ export default function ContactPage() {
                                 When it makes sense to contact us
                             </h2>
                             <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-700">
-                                <li>• You regularly answer security questionnaires for enterprise customers</li>
-                                <li>• Security reviews slow down late-stage deals</li>
-                                <li>• You want consistent, source-backed answers</li>
-                                <li>• You are evaluating whether VendorQ fits your workflow</li>
+                                <li>
+                                    • You regularly answer security questionnaires for enterprise
+                                    customers
+                                </li>
+                                <li>
+                                    • Security reviews slow down late-stage sales conversations
+                                </li>
+                                <li>
+                                    • You want consistent, source-backed answers
+                                </li>
+                                <li>
+                                    • You want to evaluate VendorQ on a real questionnaire
+                                </li>
                             </ul>
                         </div>
 
-                        {/* When it probably doesn't */}
+                        {/* When it probably doesn’t */}
                         <div className="mt-8">
                             <h2 className="text-lg font-semibold text-zinc-900">
                                 When it probably doesn’t
                             </h2>
                             <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-700">
                                 <li>• You are looking for a full GRC or compliance platform</li>
-                                <li>• You do not deal with customer security questionnaires</li>
-                                <li>• You need enterprise-wide compliance automation today</li>
+                                <li>• You don’t deal with customer security questionnaires</li>
+                                <li>
+                                    • You need enterprise-wide compliance automation today
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -92,7 +104,8 @@ export default function ContactPage() {
                                         htmlFor="company"
                                         className="block text-sm font-medium text-zinc-900"
                                     >
-                                        Company <span className="text-zinc-500">(optional)</span>
+                                        Company{" "}
+                                        <span className="text-zinc-500">(optional)</span>
                                     </label>
                                     <input
                                         id="company"
@@ -113,6 +126,7 @@ export default function ContactPage() {
                                         id="message"
                                         name="message"
                                         rows={4}
+                                        placeholder="Describe the questionnaire or situation you want to evaluate."
                                         className="mt-1 w-full rounded-md border border-zinc-300 px-3 py-2 text-sm focus:border-zinc-900 focus:outline-none focus:ring-1 focus:ring-zinc-900"
                                     />
                                 </div>
@@ -120,9 +134,9 @@ export default function ContactPage() {
                                 <div className="pt-2">
                                     <button
                                         type="submit"
-                                        className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+                                        className="inline-flex w-full items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
                                     >
-                                        Send message
+                                        Run a pilot security questionnaire
                                     </button>
                                 </div>
 
@@ -146,10 +160,10 @@ export default function ContactPage() {
                         <div className="mt-6 text-sm text-zinc-500">
                             Or email us directly at{" "}
                             <a
-                                href="mailto:hello@vendorq.com"
+                                href="mailto:security@vendorq.app"
                                 className="underline hover:text-zinc-700"
                             >
-                                hello@vendorq.com
+                                security@vendorq.app
                             </a>
                             .
                         </div>

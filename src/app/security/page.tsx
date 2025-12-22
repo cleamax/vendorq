@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "Security | VendorQ",
     description:
-        "Enterprise-ready security practices at VendorQ. How data is handled, protected, and controlled.",
+        "How VendorQ handles data, access, and security for enterprise security questionnaire workflows.",
 };
 
 export default function SecurityPage() {
@@ -17,8 +17,7 @@ export default function SecurityPage() {
                         Security at VendorQ
                     </h1>
                     <p className="mt-4 text-base leading-7 text-zinc-600">
-                        Built for enterprise security reviews. Calm, private, and controlled
-                        by design.
+                        Built for enterprise security reviews. Calm, private, and controlled.
                     </p>
                 </div>
 
@@ -26,32 +25,32 @@ export default function SecurityPage() {
                     {[
                         {
                             title: "Private storage by default",
-                            desc: "Customer data is isolated and not shared.",
+                            desc: "Customer data is isolated and not shared between tenants.",
                         },
                         {
                             title: "Encryption in transit",
-                            desc: "All traffic is protected via HTTPS/TLS.",
+                            desc: "All traffic is protected using HTTPS and TLS.",
                         },
                         {
                             title: "Tenant isolation",
-                            desc: "Row Level Security enforces strict data separation.",
+                            desc: "Row Level Security enforces strict separation of customer data.",
                         },
                         {
                             title: "Customer-controlled retention",
-                            desc: "You decide what stays and what is deleted.",
+                            desc: "You control when documents and accounts are deleted.",
                         },
                         {
                             title: "Not used for training",
-                            desc: "Customer data is never used to train models.",
+                            desc: "Customer data is not used to train language models.",
                         },
                         {
                             title: "Delete anytime",
-                            desc: "Documents and accounts can be removed on demand.",
+                            desc: "Documents and associated data can be removed on request.",
                         },
                     ].map((item) => (
                         <div
                             key={item.title}
-                            className="rounded-lg border border-zinc-200 bg-white p-4 shadow-sm"
+                            className="rounded-lg border border-zinc-200 bg-white p-4"
                         >
                             <p className="text-sm font-medium text-zinc-900">{item.title}</p>
                             <p className="mt-1 text-sm text-zinc-600">{item.desc}</p>
@@ -71,11 +70,11 @@ export default function SecurityPage() {
                         {[
                             {
                                 step: "Upload",
-                                desc: "Files are uploaded via the browser using encrypted connections.",
+                                desc: "Documents are uploaded through the browser using encrypted connections.",
                             },
                             {
                                 step: "Store",
-                                desc: "Documents are stored in private, managed infrastructure.",
+                                desc: "Files are stored in private, managed infrastructure.",
                             },
                             {
                                 step: "Process",
@@ -83,11 +82,11 @@ export default function SecurityPage() {
                             },
                             {
                                 step: "Generate",
-                                desc: "AI assists with drafting answers using limited context.",
+                                desc: "Language models assist with drafting answers using limited context.",
                             },
                             {
                                 step: "Export / Delete",
-                                desc: "Customers export reviewer-ready files or delete data.",
+                                desc: "Customers export reviewer-ready files or delete their data.",
                             },
                         ].map((item, index) => (
                             <div
@@ -106,7 +105,7 @@ export default function SecurityPage() {
                     </div>
 
                     <p className="mt-6 max-w-3xl text-sm text-zinc-600">
-                        Processing happens server-side. No sensitive documents or keys are
+                        Processing happens server-side. Sensitive documents and keys are not
                         exposed to the client.
                     </p>
                 </div>
@@ -123,8 +122,8 @@ export default function SecurityPage() {
                             <li>• Store customer documents privately</li>
                             <li>• Enforce tenant isolation via Row Level Security</li>
                             <li>• Encrypt data in transit</li>
-                            <li>• Allow customers to export and delete data</li>
-                            <li>• Limit internal access by role and necessity</li>
+                            <li>• Allow export and deletion of customer data</li>
+                            <li>• Restrict internal access based on role and necessity</li>
                         </ul>
                     </div>
 
@@ -133,17 +132,17 @@ export default function SecurityPage() {
                             What we don’t do
                         </h2>
                         <ul className="mt-4 space-y-2 text-sm leading-6 text-zinc-700">
-                            <li>• Train AI models on customer data</li>
-                            <li>• Sell or share customer data</li>
-                            <li>• Provide public access to documents</li>
-                            <li>• Retain data after deletion requests</li>
+                            <li>• Train language models on customer data</li>
+                            <li>• Sell or share customer information</li>
+                            <li>• Provide public access to private documents</li>
+                            <li>• Retain data after confirmed deletion</li>
                             <li>• Claim certifications we do not yet hold</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            {/* SECURITY CONTROLS GRID */}
+            {/* SECURITY CONTROLS */}
             <section className="bg-zinc-50">
                 <div className="mx-auto max-w-6xl px-6 py-16">
                     <h2 className="text-lg font-semibold text-zinc-900">
@@ -155,8 +154,8 @@ export default function SecurityPage() {
                             {
                                 title: "Authentication",
                                 items: [
-                                    "Handled via Supabase Auth",
-                                    "Protected sessions",
+                                    "Email-based authentication via Supabase",
+                                    "Session-based access control",
                                 ],
                             },
                             {
@@ -169,14 +168,14 @@ export default function SecurityPage() {
                             {
                                 title: "Encryption",
                                 items: [
-                                    "HTTPS / TLS in transit",
-                                    "Managed encrypted storage",
+                                    "HTTPS / TLS for data in transit",
+                                    "Managed encrypted storage at rest",
                                 ],
                             },
                             {
                                 title: "Retention & deletion",
                                 items: [
-                                    "Customer-controlled deletion",
+                                    "Customer-controlled document deletion",
                                     "Account-level data removal",
                                 ],
                             },
@@ -184,20 +183,20 @@ export default function SecurityPage() {
                                 title: "AI usage",
                                 items: [
                                     "Draft assistance only",
-                                    "Human review required",
+                                    "Human review required before export",
                                 ],
                             },
                             {
                                 title: "Subprocessors",
                                 items: [
                                     "Vercel, Supabase, OpenAI",
-                                    "Purpose-limited usage",
+                                    "Purpose-limited data usage",
                                 ],
                             },
                         ].map((card) => (
                             <div
                                 key={card.title}
-                                className="rounded-lg border border-zinc-200 bg-white p-5 shadow-sm"
+                                className="rounded-lg border border-zinc-200 bg-white p-5"
                             >
                                 <p className="text-sm font-medium text-zinc-900">
                                     {card.title}
@@ -213,21 +212,21 @@ export default function SecurityPage() {
                 </div>
             </section>
 
-            {/* DETAILS AS ACCORDIONS */}
+            {/* DETAILS */}
             <section className="mx-auto max-w-6xl px-6 py-16">
                 <h2 className="text-lg font-semibold text-zinc-900">
                     Additional details
                 </h2>
 
-                <div className="mt-6 space-y-4 max-w-3xl">
+                <div className="mt-6 max-w-3xl space-y-4">
                     <details className="rounded-lg border border-zinc-200 p-4">
                         <summary className="cursor-pointer text-sm font-medium text-zinc-900">
                             AI and language model usage
                         </summary>
                         <p className="mt-3 text-sm text-zinc-600">
-                            AI is used to assist with drafting answers. Users review and
-                            approve all content before export. Customer data is not used to
-                            train models, and only necessary context is shared.
+                            Language models assist with drafting answers. Users review and
+                            approve all content before export. Customer data is not used for
+                            training, and only necessary context is shared.
                         </p>
                     </details>
 
@@ -236,9 +235,9 @@ export default function SecurityPage() {
                             Compliance and certifications
                         </summary>
                         <p className="mt-3 text-sm text-zinc-600">
-                            VendorQ does not yet hold formal certifications. We build aligned
-                            with SOC 2 and ISO 27001 best practices. Certifications are planned
-                            as the product matures.
+                            VendorQ does not currently hold formal certifications. Security is
+                            implemented in alignment with SOC 2 and ISO 27001 best practices.
+                            Certifications may be pursued as the product matures.
                         </p>
                     </details>
 
@@ -247,16 +246,16 @@ export default function SecurityPage() {
                             Infrastructure and subprocessors
                         </summary>
                         <p className="mt-3 text-sm text-zinc-600">
-                            Hosting is provided by Vercel. Database and storage are handled by
-                            Supabase. AI assistance is provided by OpenAI. Each subprocessor
-                            is used for a clearly defined purpose.
+                            VendorQ uses Vercel for hosting, Supabase for database and storage,
+                            and OpenAI for language model assistance. Each provider is used for
+                            a clearly defined purpose.
                         </p>
                         <p className="mt-2 text-sm text-zinc-600">
                             See our{" "}
                             <Link href="/privacy" className="underline">
                                 privacy policy
                             </Link>{" "}
-                            for details.
+                            for more information.
                         </p>
                     </details>
 
@@ -265,12 +264,12 @@ export default function SecurityPage() {
                             Responsible disclosure
                         </summary>
                         <p className="mt-3 text-sm text-zinc-600">
-                            Please report security vulnerabilities responsibly.
+                            Security vulnerabilities can be reported responsibly via email.
                         </p>
                         <p className="mt-2 text-sm text-zinc-600">
                             Contact:{" "}
-                            <a href="mailto:security@vendorq.com" className="underline">
-                                security@vendorq.com
+                            <a href="mailto:security@vendorq.app" className="underline">
+                                security@vendorq.app
                             </a>
                         </p>
                         <p className="mt-2 text-sm text-zinc-600">
@@ -287,11 +286,11 @@ export default function SecurityPage() {
                         Security FAQ
                     </h2>
 
-                    <div className="mt-6 space-y-4 max-w-3xl">
+                    <div className="mt-6 max-w-3xl space-y-4">
                         {[
                             {
                                 q: "Do you use our data for training?",
-                                a: "No. Customer data is not used to train models.",
+                                a: "No. Customer data is not used to train language models.",
                             },
                             {
                                 q: "Can we delete all our data?",
@@ -303,7 +302,7 @@ export default function SecurityPage() {
                             },
                             {
                                 q: "Who can access our data internally?",
-                                a: "Access is limited to authorized personnel following least privilege.",
+                                a: "Access is limited to authorized personnel following the principle of least privilege.",
                             },
                             {
                                 q: "Can we sign a DPA?",
@@ -311,7 +310,7 @@ export default function SecurityPage() {
                             },
                             {
                                 q: "Do you support SSO or SAML?",
-                                a: "SSO and SAML support are planned for enterprise customers.",
+                                a: "SSO and SAML are planned for enterprise customers.",
                             },
                             {
                                 q: "Is VendorQ self-hosted?",
