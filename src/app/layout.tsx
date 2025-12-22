@@ -4,8 +4,28 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteNavbar } from "@/components/site-navbar";
 
 export const metadata: Metadata = {
-  title: "VendorQ AI",
-  description: "Answer security questionnaires in minutes — not days.",
+  title: {
+    default: "VendorQ",
+    template: "%s | VendorQ",
+  },
+  description:
+    "VendorQ helps SaaS teams selling to enterprise customers answer security questionnaires faster with consistent, source-backed responses.",
+  applicationName: "VendorQ",
+  metadataBase: new URL("https://vendorq.app"),
+  openGraph: {
+    title: "VendorQ",
+    description:
+      "Answer enterprise security questionnaires faster with consistent, source-backed responses.",
+    type: "website",
+    url: "https://vendorq.app",
+    siteName: "VendorQ",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VendorQ",
+    description:
+      "Answer enterprise security questionnaires faster with consistent, source-backed responses.",
+  },
 };
 
 export default function RootLayout({
@@ -23,3 +43,4 @@ export default function RootLayout({
     </html>
   );
 }
+

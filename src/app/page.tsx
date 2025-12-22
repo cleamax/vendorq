@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "VendorQ — Evaluate one security questionnaire",
+  description:
+    "VendorQ helps SaaS teams selling to enterprise customers answer security questionnaires faster with consistent, source-backed responses.",
+};
+
 export default function Page() {
   return (
     <main className="bg-white text-zinc-950">
@@ -6,31 +14,34 @@ export default function Page() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           <div className="max-w-xl">
             <p className="text-sm font-medium text-zinc-600">VendorQ</p>
+
             <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Answer security questionnaires without stalling sales.
+              Answer enterprise security questionnaires faster — so deals keep moving.
             </h1>
+
             <p className="mt-4 text-base leading-7 text-zinc-600">
-              VendorQ helps SaaS teams respond consistently, cite the right source, and stop re-writing the same answers for
-              every customer review.
+              Built for <span className="font-medium text-zinc-900">SaaS teams selling to enterprise customers</span>{" "}
+              who need consistent, source-backed answers that security reviewers can verify quickly.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
               <a
-                href="/login"
+                href="/contact"
                 className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
               >
-                Get started
+                Evaluate one questionnaire with VendorQ
               </a>
+
               <a
                 href="#not-for-everyone"
-                className="inline-flex items-center justify-center rounded-md border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-900 shadow-sm hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+                className="text-sm font-medium text-zinc-700 underline decoration-zinc-300 underline-offset-4 hover:text-zinc-900"
               >
                 See if it fits
               </a>
             </div>
 
             <div className="mt-6 text-xs leading-5 text-zinc-500">
-              Built for enterprise review cycles. Calm by design. No gimmicks.
+              Early-stage product. Currently used in pilot evaluations with SaaS teams.
             </div>
           </div>
 
@@ -124,14 +135,60 @@ Encryption keys are managed via a centralized KMS with rotation policies and acc
           <div>
             <h2 className="text-sm font-semibold text-zinc-900">Move reviews forward with fewer stalls</h2>
             <p className="mt-2 text-sm leading-6 text-zinc-600">
-              Respond faster when questionnaires arrive late in the cycle—without relying on one person to “know where the
-              doc is.”
+              Respond when questionnaires arrive late in the cycle—without relying on one person to “know where the doc is.”
             </p>
           </div>
         </div>
       </section>
 
-      {/* NEW: 1) What security reviewers actually expect */}
+      {/* Visual product understanding (static flow) */}
+      <section className="mx-auto max-w-6xl px-6 pb-14">
+        <div className="border-t border-zinc-200 pt-10">
+          <div className="max-w-2xl">
+            <h2 className="text-lg font-semibold tracking-tight text-zinc-900">How VendorQ fits into a real deal</h2>
+            <p className="mt-2 text-sm leading-6 text-zinc-600">
+              A simple workflow: reuse verified answers with sources, then export a reviewer-ready response.
+            </p>
+          </div>
+
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            <div className="rounded-lg border border-zinc-200 bg-white p-5">
+              <p className="text-xs font-medium text-zinc-500">Step 1</p>
+              <p className="mt-1 text-sm font-semibold text-zinc-900">Upload questionnaire</p>
+              <p className="mt-2 text-sm leading-6 text-zinc-600">
+                Bring the customer’s spreadsheet or document and your existing policies.
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-5">
+              <p className="text-xs font-medium text-zinc-500">Step 2</p>
+              <p className="mt-1 text-sm font-semibold text-zinc-900">Reuse verified answers</p>
+              <p className="mt-2 text-sm leading-6 text-zinc-600">
+                Use consistent responses linked to policy sections and supporting material.
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-zinc-200 bg-white p-5">
+              <p className="text-xs font-medium text-zinc-500">Step 3</p>
+              <p className="mt-1 text-sm font-semibold text-zinc-900">Export reviewer-ready</p>
+              <p className="mt-2 text-sm leading-6 text-zinc-600">
+                Share a clean export with sources to reduce follow-ups and delays.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+            >
+              Evaluate one questionnaire with VendorQ
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* What security reviewers actually expect */}
       <section className="mx-auto max-w-6xl px-6 pb-14">
         <div className="border-t border-zinc-200 pt-10">
           <div className="max-w-2xl">
@@ -153,7 +210,7 @@ Encryption keys are managed via a centralized KMS with rotation policies and acc
         </div>
       </section>
 
-      {/* NEW: 2) Before vs After VendorQ */}
+      {/* Before vs After VendorQ */}
       <section className="mx-auto max-w-6xl px-6 pb-14">
         <div className="border-t border-zinc-200 pt-10">
           <div className="max-w-2xl">
@@ -176,22 +233,31 @@ Encryption keys are managed via a centralized KMS with rotation policies and acc
               <ul className="mt-3 space-y-2 text-sm leading-6 text-zinc-700">
                 <li>• One source of truth for security answers</li>
                 <li>• Reused answers with clear sources</li>
-                <li>• Clear ownership and consistency</li>
+                <li>• Clear ownership and consistent wording</li>
                 <li>• Fewer clarification emails from reviewers</li>
               </ul>
             </div>
           </div>
+
+          <div className="mt-8">
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+            >
+              Evaluate one questionnaire with VendorQ
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* NEW: 3) Mini Data & Trust block */}
+      {/* Mini Data & Trust block */}
       <section className="mx-auto max-w-6xl px-6 pb-16">
         <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-6">
           <div className="max-w-2xl">
             <h2 className="text-sm font-semibold text-zinc-900">Your data stays yours</h2>
             <ul className="mt-3 space-y-2 text-sm leading-6 text-zinc-700">
               <li>• Stored privately</li>
-              <li>• Never used for training</li>
+              <li>• Not used for training</li>
               <li>• You control retention</li>
               <li>• Delete anytime</li>
             </ul>
@@ -200,7 +266,7 @@ Encryption keys are managed via a centralized KMS with rotation policies and acc
         </div>
       </section>
 
-      {/* 3) Explicit "Who this is NOT for" */}
+      {/* Explicit "Who this is NOT for" */}
       <section id="not-for-everyone" className="mx-auto max-w-6xl px-6 pb-16">
         <div className="rounded-xl border border-zinc-200 bg-white p-6 shadow-sm sm:p-8">
           <div className="max-w-2xl">
@@ -229,15 +295,17 @@ Encryption keys are managed via a centralized KMS with rotation policies and acc
               </ul>
             </div>
           </div>
+
+          <div className="mt-8">
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+            >
+              Evaluate one questionnaire with VendorQ
+            </a>
+          </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="mx-auto max-w-6xl px-6 pb-12">
-        <div className="border-t border-zinc-200 pt-6 text-xs text-zinc-500">
-          © {new Date().getFullYear()} VendorQ. Built for clarity, not for noise.
-        </div>
-      </footer>
     </main>
   );
 }
