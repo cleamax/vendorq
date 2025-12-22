@@ -7,8 +7,9 @@ export function SiteFooter() {
                 <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                         <p className="text-sm font-semibold text-zinc-900">VendorQ</p>
-                        <p className="mt-1 text-xs text-zinc-500">
-                            Built for enterprise security reviews. Calm by design.
+                        <p className="mt-1 max-w-sm text-xs leading-5 text-zinc-500">
+                            VendorQ helps SaaS teams answer enterprise security questionnaires
+                            with consistent, source-backed responses.
                         </p>
                     </div>
 
@@ -40,10 +41,10 @@ export function SiteFooter() {
                 <div className="mt-8 flex flex-col gap-2 text-xs text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
                     <div>© {new Date().getFullYear()} VendorQ</div>
                     <div className="flex gap-4">
-                        <Link href="/privacy" className="underline hover:text-zinc-700">
+                        <Link href="/privacy" className="underline underline-offset-4 hover:text-zinc-700">
                             Privacy
                         </Link>
-                        <Link href="/imprint" className="underline hover:text-zinc-700">
+                        <Link href="/imprint" className="underline underline-offset-4 hover:text-zinc-700">
                             Imprint
                         </Link>
                     </div>
