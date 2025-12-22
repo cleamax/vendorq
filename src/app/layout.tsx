@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteNavbar } from "@/components/site-navbar";
 
 export const metadata: Metadata = {
   title: "VendorQ AI",
@@ -14,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-white text-slate-900 antialiased">
-        {children}
+        <SiteNavbar />
+        <div className="min-h-[calc(100vh-3.5rem)]">{children}</div>
+        <SiteFooter />
       </body>
     </html>
   );
