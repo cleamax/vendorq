@@ -119,7 +119,29 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "ss01" 1, "cv01" 1, "cv02" 1;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Calm typographic discipline (global, minimal) */
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    letter-spacing: -0.01em;
+  }
+
+  /* Quiet link styling (avoid loud default blue) */
+  a {
+    @apply text-inherit;
   }
 }

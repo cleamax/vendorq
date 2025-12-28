@@ -1,33 +1,30 @@
 import Link from "next/link";
 
-const navItems: Array<{ href: string; label: string }> = [
+const navItems = [
     { href: "/how-it-works", label: "How it works" },
     { href: "/pricing", label: "Pricing" },
     { href: "/security", label: "Security" },
+    { href: "/contact", label: "Contact" },
 ];
 
 export function SiteNavbar() {
     return (
         <header className="border-b border-zinc-200 bg-white">
-            <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
-                <div className="flex items-center gap-8">
+            <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+                <div className="flex items-center gap-10">
                     <Link
                         href="/"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-900"
+                        className="text-sm font-semibold tracking-tight text-zinc-900"
                     >
-                        <span
-                            className="inline-block h-2 w-2 rounded-full bg-zinc-900"
-                            aria-hidden="true"
-                        />
                         VendorQ
                     </Link>
 
-                    <nav className="hidden items-center gap-6 md:flex" aria-label="Primary">
+                    <nav className="hidden md:flex items-center gap-8 text-sm text-zinc-600">
                         {navItems.map((item) => (
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="text-sm text-zinc-600 hover:text-zinc-900"
+                                className="hover:text-zinc-900"
                             >
                                 {item.label}
                             </Link>
@@ -35,15 +32,12 @@ export function SiteNavbar() {
                     </nav>
                 </div>
 
-                {/* SINGLE PRIMARY CTA */}
-                <div>
-                    <Link
-                        href="/contact"
-                        className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
-                    >
-                        Run a pilot security questionnaire
-                    </Link>
-                </div>
+                <Link
+                    href="/contact"
+                    className="text-sm font-medium text-zinc-900 underline underline-offset-4 hover:text-zinc-700"
+                >
+                    Run a pilot questionnaire
+                </Link>
             </div>
         </header>
     );
