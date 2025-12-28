@@ -7,14 +7,14 @@ import { FlowSteps } from "@/components/landing/flow-steps";
 export const metadata: Metadata = {
   title: "VendorQ — Run a pilot security questionnaire",
   description:
-    "VendorQ helps SaaS teams selling to enterprise customers reduce time spent on security questionnaires by reusing consistent, source-backed answers.",
+    "VendorQ helps SaaS teams selling to enterprise customers answer security questionnaires with consistent, source-backed responses — so deals don’t stall.",
 };
 
 export default function Page() {
   return (
     <main className="bg-white text-zinc-950">
       {/* HERO */}
-      <section className="mx-auto max-w-6xl px-6 pt-16 pb-10 sm:pt-20">
+      <section className="mx-auto max-w-6xl px-6 pb-10 pt-16 sm:pt-20">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             Security questionnaires shouldn’t be the reason a deal stalls.
@@ -29,14 +29,23 @@ export default function Page() {
             reviewers can verify.
           </p>
 
-          <p className="mt-5 text-xs leading-5 text-zinc-500">
+          <div className="mt-7">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+            >
+              Run a pilot security questionnaire
+            </Link>
+          </div>
+
+          <p className="mt-4 text-xs leading-5 text-zinc-500">
             Early-stage product. Used in pilot evaluations with SaaS teams.
           </p>
         </div>
       </section>
 
       {/* SCROLL NARRATIVE: PROBLEM */}
-      <section className="mx-auto max-w-6xl px-6 pt-6 pb-4">
+      <section className="mx-auto max-w-6xl px-6 pb-4 pt-6">
         <ScrollNarrative
           eyebrow="The problem"
           stickyTitle="Why enterprise security reviews slow down deals"
@@ -63,7 +72,7 @@ export default function Page() {
       </section>
 
       {/* TRANSFORMATION */}
-      <section className="mx-auto max-w-6xl px-6 pt-6 pb-6">
+      <section className="mx-auto max-w-6xl px-6 pb-6 pt-6">
         <TransformationScroll
           eyebrow="What changes"
           stickyTitle="From scattered answers to a single source of truth"
@@ -84,7 +93,7 @@ export default function Page() {
       </section>
 
       {/* PRODUCT FLOW */}
-      <section className="mx-auto max-w-6xl px-6 pt-8 pb-12">
+      <section className="mx-auto max-w-6xl px-6 pb-12 pt-8">
         <FlowSteps
           eyebrow="How it works"
           title="How VendorQ fits into a real deal"
@@ -115,7 +124,7 @@ export default function Page() {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-6xl px-6 pt-8 pb-20">
+      <section className="mx-auto max-w-6xl px-6 pb-20 pt-8">
         <div className="max-w-3xl">
           <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
             The next step is simple: run one real questionnaire.
@@ -128,9 +137,9 @@ export default function Page() {
           <div className="mt-6">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800"
+              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
             >
-              Start a free pilot questionnaire
+              Run a pilot security questionnaire
             </Link>
           </div>
         </div>

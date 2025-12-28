@@ -4,7 +4,6 @@ const navItems: Array<{ href: string; label: string }> = [
     { href: "/how-it-works", label: "How it works" },
     { href: "/pricing", label: "Pricing" },
     { href: "/security", label: "Security" },
-    { href: "/contact", label: "Contact" },
 ];
 
 export function SiteNavbar() {
@@ -36,19 +35,13 @@ export function SiteNavbar() {
                     </nav>
                 </div>
 
-                <div className="flex items-center gap-3">
+                {/* SINGLE PRIMARY CTA */}
+                <div>
                     <Link
                         href="/contact"
-                        className="inline-flex items-center justify-center rounded-md border border-zinc-300 bg-white px-3 py-1.5 text-sm font-medium text-zinc-900 hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
-                    >
-                        Run a pilot security questionnaire
-                    </Link>
-
-                    <Link
-                        href="/login"
                         className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-3 py-1.5 text-sm font-medium text-white shadow-sm hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
                     >
-                        Login
+                        Run a pilot security questionnaire
                     </Link>
                 </div>
             </div>

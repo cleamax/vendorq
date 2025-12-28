@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     template: "%s | VendorQ",
   },
   description:
-    "VendorQ helps SaaS teams selling to enterprise customers reduce time spent on security questionnaires by reusing consistent, source-backed answers.",
+    "VendorQ helps SaaS teams selling to enterprise customers answer security questionnaires with consistent, source-backed responses — so deals don’t stall.",
   applicationName: "VendorQ",
   metadataBase: new URL("https://vendorq.app"),
   openGraph: {
     title: "VendorQ",
     description:
-      "Run a pilot security questionnaire and evaluate consistent, source-backed responses for enterprise security reviews.",
+      "Run a pilot security questionnaire and evaluate consistent, source-backed responses — so enterprise reviews don’t stall deals.",
     type: "website",
     url: "https://vendorq.app",
     siteName: "VendorQ",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "VendorQ",
     description:
-      "Run a pilot security questionnaire and evaluate consistent, source-backed responses for enterprise security reviews.",
+      "Run a pilot security questionnaire and evaluate consistent, source-backed responses — so enterprise reviews don’t stall deals.",
   },
 };
 

@@ -8,13 +8,15 @@ export function SiteFooter() {
                     <div>
                         <p className="text-sm font-semibold text-zinc-900">VendorQ</p>
                         <p className="mt-1 max-w-sm text-xs leading-5 text-zinc-500">
-                            VendorQ helps SaaS teams selling to enterprise customers reduce time
-                            spent on security questionnaires with consistent, source-backed
-                            answers.
+                            VendorQ helps SaaS teams selling to enterprise customers answer
+                            security questionnaires with consistent, source-backed responses.
                         </p>
                     </div>
 
-                    <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm" aria-label="Footer navigation">
+                    <nav
+                        className="flex flex-wrap gap-x-6 gap-y-2 text-sm"
+                        aria-label="Footer navigation"
+                    >
                         <Link href="/how-it-works" className="text-zinc-600 hover:text-zinc-900">
                             How it works
                         </Link>
@@ -39,10 +41,16 @@ export function SiteFooter() {
                 <div className="mt-8 flex flex-col gap-2 text-xs text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
                     <div>© {new Date().getFullYear()} VendorQ</div>
                     <div className="flex gap-4">
-                        <Link href="/privacy" className="underline underline-offset-4 hover:text-zinc-700">
+                        <Link
+                            href="/privacy"
+                            className="underline underline-offset-4 hover:text-zinc-700"
+                        >
                             Privacy
                         </Link>
-                        <Link href="/imprint" className="underline underline-offset-4 hover:text-zinc-700">
+                        <Link
+                            href="/imprint"
+                            className="underline underline-offset-4 hover:text-zinc-700"
+                        >
                             Imprint
                         </Link>
                     </div>
