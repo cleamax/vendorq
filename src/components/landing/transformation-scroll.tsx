@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 
 type Props = {
@@ -13,19 +13,15 @@ type Props = {
     after: string[];
 };
 
-function Sentinel({
-    onEnter,
-}: {
-    onEnter: () => void;
-}) {
-    const [el, setEl] = useState<HTMLDivElement | null>(null);
-    const inView = useInView(el, { amount: 0.6, margin: "-20% 0px -40% 0px" });
+function Sentinel({ onEnter }: { onEnter: () => void }) {
+    const ref = useRef<HTMLDivElement | null>(null);
+    const inView = useInView(ref, { amount: 0.6, margin: "-20% 0px -40% 0px" });
 
     useEffect(() => {
         if (inView) onEnter();
     }, [inView, onEnter]);
 
-    return <div ref={setEl} className="h-2" aria-hidden="true" />;
+    return <div ref={ref} className="h-2" aria-hidden="true" />;
 }
 
 export function TransformationScroll({
@@ -99,7 +95,10 @@ export function TransformationScroll({
                         animate={
                             reduce
                                 ? { opacity: 1 }
-                                : { opacity: mode === "before" ? 1 : 0.35, y: mode === "before" ? 0 : 6 }
+                                : {
+                                    opacity: mode === "before" ? 1 : 0.35,
+                                    y: mode === "before" ? 0 : 6,
+                                }
                         }
                         transition={reduce ? { duration: 0 } : { duration: 0.28, ease: "easeOut" }}
                     >
@@ -123,7 +122,10 @@ export function TransformationScroll({
                         animate={
                             reduce
                                 ? { opacity: 1 }
-                                : { opacity: mode === "after" ? 1 : 0.35, y: mode === "after" ? 0 : 6 }
+                                : {
+                                    opacity: mode === "after" ? 1 : 0.35,
+                                    y: mode === "after" ? 0 : 6,
+                                }
                         }
                         transition={reduce ? { duration: 0 } : { duration: 0.28, ease: "easeOut" }}
                     >

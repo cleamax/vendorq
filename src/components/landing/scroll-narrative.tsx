@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
 
 type Step = {
@@ -29,12 +29,9 @@ function StepItem({
     onEnter: (index: number) => void;
 }) {
     const reduce = useReducedMotion();
-    const ref = (node: HTMLDivElement | null) => {
-        // noop placeholder so TS accepts callback refs in conjunction with useInView ref
-    };
+    const ref = useRef<HTMLDivElement | null>(null);
 
-    const [el, setEl] = useState<HTMLDivElement | null>(null);
-    const inView = useInView(el, { amount: 0.6, margin: "-10% 0px -40% 0px" });
+    const inView = useInView(ref, { amount: 0.6, margin: "-10% 0px -40% 0px" });
 
     useEffect(() => {
         if (inView) onEnter(index);
@@ -45,7 +42,7 @@ function StepItem({
 
     return (
         <motion.div
-            ref={setEl}
+            ref={ref}
             className={base}
             initial={false}
             animate={
@@ -83,12 +80,10 @@ export function ScrollNarrative({ eyebrow, stickyTitle, stickyBody, steps }: Pro
                         {stickyTitle}
                     </h2>
                     {stickyBody ? (
-                        <p className="mt-3 text-sm leading-6 text-zinc-600">
-                            {stickyBody}
-                        </p>
+                        <p className="mt-3 text-sm leading-6 text-zinc-600">{stickyBody}</p>
                     ) : null}
 
-                    {/* Subtle active indicator (text-first, no icons) */}
+                    {/* Subtle active indicator */}
                     <div className="mt-6 hidden md:block">
                         <p className="text-xs font-medium text-zinc-500">Currently</p>
                         <p className="mt-1 text-sm font-medium text-zinc-900">
@@ -112,7 +107,6 @@ export function ScrollNarrative({ eyebrow, stickyTitle, stickyBody, steps }: Pro
                     />
                 ))}
 
-                {/* Spacer for scroll rhythm on desktop; keeps sticky feeling intentional */}
                 <div className={reduce ? "h-0" : "hidden md:block md:h-6"} />
             </div>
         </div>
