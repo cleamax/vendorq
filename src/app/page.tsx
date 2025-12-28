@@ -1,152 +1,106 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ScrollNarrative } from "@/components/landing/scroll-narrative";
-import { TransformationScroll } from "@/components/landing/transformation-scroll";
-import { FlowSteps } from "@/components/landing/flow-steps";
 
 export const metadata: Metadata = {
   title: "VendorQ",
   description:
-    "VendorQ helps SaaS teams selling to enterprise customers answer security questionnaires with consistent, source-backed responses.",
+    "VendorQ is a system for producing consistent, source-backed answers to enterprise security questionnaires.",
 };
 
 export default function Page() {
   return (
     <main className="bg-white text-zinc-950">
-      {/* HERO */}
-      <section className="mx-auto max-w-6xl px-6 pt-28 pb-36">
-        <div className="max-w-3xl">
-          <h1 className="text-[3.75rem] leading-[1.02] font-semibold tracking-tight">
-            Security questionnaires<br />
-            shouldn’t decide<br />
-            whether a deal closes.
+      <div className="mx-auto max-w-4xl px-6 py-24 sm:py-32">
+        {/* 1) OPENING STATEMENT */}
+        <section className="mb-20">
+          <h1 className="text-5xl font-semibold leading-tight tracking-tight sm:text-6xl">
+            Enterprise security reviews fail when answers lack consistency.
           </h1>
+        </section>
 
-          <p className="mt-10 text-lg leading-8 text-zinc-600">
-            VendorQ is built for{" "}
-            <span className="text-zinc-900 font-medium">
-              SaaS teams selling to enterprise customers
-            </span>
-            . It helps teams reuse consistent, source-backed answers that
-            security reviewers can clearly verify.
+        {/* 2) CONTEXT PARAGRAPH */}
+        <section className="mb-20 max-w-3xl">
+          <p className="text-lg leading-8 text-zinc-700">
+            Security questionnaires exist to assess risk and establish trust.
+            In practice, they often slow down deals because answers are scattered
+            across documents, rewritten for each customer, and difficult to
+            verify. The problem is rarely missing controls — it is unclear,
+            inconsistent responses.
           </p>
+        </section>
 
-          <p className="mt-12 text-sm text-zinc-500">
-            Early-stage product. Used in pilot evaluations.
+        {/* 3) WHAT VENDORQ IS */}
+        <section className="mb-24 max-w-3xl">
+          <p className="text-xl leading-8 text-zinc-900">
+            VendorQ is a system for producing consistent, source-backed answers
+            to enterprise security questionnaires.
           </p>
-        </div>
-      </section>
-
-      {/* STATEMENT */}
-      <section className="mx-auto max-w-6xl px-6 pb-40">
-        <p className="max-w-4xl text-2xl leading-relaxed text-zinc-900">
-          Most deals don’t slow down because controls are missing.
-          <br />
-          They slow down because answers aren’t trusted.
-        </p>
-      </section>
-
-      {/* PROBLEM NARRATIVE */}
-      <section className="mx-auto max-w-6xl px-6 pb-44">
-        <ScrollNarrative
-          eyebrow="The reality"
-          stickyTitle="Why enterprise security reviews stall deals"
-          stickyBody="The same friction appears in almost every late-stage sale."
-          steps={[
-            {
-              title: "Scattered answers",
-              body: "Responses live across documents, spreadsheets, and old questionnaires.",
-            },
-            {
-              title: "Inconsistent wording",
-              body: "Similar questions receive different answers across customers.",
-            },
-            {
-              title: "Reviewer pushback",
-              body: "Unclear responses trigger clarification requests.",
-            },
-            {
-              title: "Lost momentum",
-              body: "Deals pause while teams chase internal approvals.",
-            },
-          ]}
-        />
-      </section>
-
-      {/* TRANSFORMATION */}
-      <section className="mx-auto max-w-6xl px-6 pb-44">
-        <TransformationScroll
-          eyebrow="What changes"
-          stickyTitle="From scattered responses to a single source of truth"
-          stickyBody="When answers are owned and reused, reviews move forward."
-          before={[
-            "Manual copy-paste",
-            "Different answers to the same question",
-            "Late-stage escalations",
-            "Reviewer clarification loops",
-          ]}
-          after={[
-            "Reusable answer library",
-            "Consistent language across customers",
-            "Clear ownership",
-            "Fewer follow-ups",
-          ]}
-        />
-      </section>
-
-      {/* FLOW */}
-      <section className="mx-auto max-w-6xl px-6 pb-48">
-        <FlowSteps
-          eyebrow="Workflow"
-          title="How VendorQ fits into a real deal"
-          subtitle="Designed for real enterprise security reviews."
-          steps={[
-            {
-              step: "Step 1",
-              title: "Upload the questionnaire",
-              body: "Add the customer file and internal policies.",
-            },
-            {
-              step: "Step 2",
-              title: "Reuse verified answers",
-              body: "Answers remain linked to specific policy sections.",
-            },
-            {
-              step: "Step 3",
-              title: "Review before sharing",
-              body: "Nothing leaves the system without human approval.",
-            },
-            {
-              step: "Step 4",
-              title: "Export reviewer-ready responses",
-              body: "Clear answers with sources included.",
-            },
-          ]}
-        />
-      </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-6xl px-6 pb-56">
-        <div className="max-w-3xl">
-          <h2 className="text-3xl font-semibold leading-tight">
-            The next step is simple.
-          </h2>
-
-          <p className="mt-5 text-base leading-7 text-zinc-600">
-            Run one real security questionnaire and evaluate VendorQ
-            in a live sales context.
+          <p className="mt-6 text-lg leading-8 text-zinc-700">
+            It centralizes how answers are written, reviewed, and reused. Each
+            response is linked to a concrete internal source, making it easier
+            for reviewers to understand and trust what is being provided.
           </p>
+        </section>
 
-          <div className="mt-14">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-5 py-3 text-sm font-medium text-white hover:bg-zinc-800"
-            >
-              Start a free pilot questionnaire
-            </Link>
-          </div>
-        </div>
-      </section>
+        {/* 4) CORE PRINCIPLE */}
+        <section className="mb-24">
+          <p className="text-3xl font-medium leading-snug tracking-tight text-zinc-900">
+            One answer. One source. Reused everywhere.
+          </p>
+        </section>
+
+        {/* 5) PROCESS OVERVIEW */}
+        <section className="mb-24 max-w-3xl">
+          <ol className="space-y-6 text-lg leading-8 text-zinc-700">
+            <li>
+              <span className="mr-2 text-zinc-900">1.</span>
+              Receive an enterprise security questionnaire
+            </li>
+            <li>
+              <span className="mr-2 text-zinc-900">2.</span>
+              Attach internal policies or documents as sources
+            </li>
+            <li>
+              <span className="mr-2 text-zinc-900">3.</span>
+              Produce consistent answers linked to those sources
+            </li>
+            <li>
+              <span className="mr-2 text-zinc-900">4.</span>
+              Reuse and refine answers across future reviews
+            </li>
+          </ol>
+        </section>
+
+        {/* 6) TRUST & SCOPE */}
+        <section className="mb-24 max-w-3xl">
+          <p className="text-lg leading-8 text-zinc-700">
+            VendorQ is intentionally narrow in scope. It focuses on answering
+            security questionnaires, not running full compliance programs or
+            continuous monitoring. Customer data remains private, is not used
+            for model training, and can be removed at any time. The product is
+            designed to support human judgment, not replace it.
+          </p>
+        </section>
+
+        {/* 7) WHO THIS IS FOR */}
+        <section className="mb-32 max-w-3xl">
+          <p className="text-lg leading-8 text-zinc-700">
+            VendorQ is built for SaaS teams selling to enterprise customers who
+            repeatedly handle security reviews and want their answers to be
+            clear, consistent, and defensible.
+          </p>
+        </section>
+
+        {/* 8) SINGLE CTA */}
+        <section>
+          <Link
+            href="/contact"
+            className="inline-block text-lg font-medium text-zinc-900 underline underline-offset-8 hover:text-zinc-700"
+          >
+            Start a pilot evaluation
+          </Link>
+        </section>
+      </div>
     </main>
   );
 }
