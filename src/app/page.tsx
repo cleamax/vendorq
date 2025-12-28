@@ -7,80 +7,80 @@ import { FlowSteps } from "@/components/landing/flow-steps";
 export const metadata: Metadata = {
   title: "VendorQ — Run a pilot security questionnaire",
   description:
-    "VendorQ helps SaaS teams selling to enterprise customers answer security questionnaires with consistent, source-backed responses — so deals don’t stall.",
+    "VendorQ helps SaaS teams selling to enterprise customers reduce time spent on security questionnaires by reusing consistent, source-backed answers.",
 };
 
 export default function Page() {
   return (
     <main className="bg-white text-zinc-950">
       {/* HERO */}
-      <section className="mx-auto max-w-6xl px-6 pb-10 pt-16 sm:pt-20">
+      <section className="mx-auto max-w-6xl px-6 pt-24 pb-28">
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Security questionnaires shouldn’t be the reason a deal stalls.
+          <h1 className="text-[3.25rem] leading-[1.05] font-semibold tracking-tight sm:text-[3.75rem]">
+            Security questionnaires<br />
+            shouldn’t stall enterprise deals.
           </h1>
 
-          <p className="mt-4 text-base leading-7 text-zinc-600">
+          <p className="mt-8 text-lg leading-8 text-zinc-600">
             VendorQ is built for{" "}
-            <span className="font-medium text-zinc-900">
+            <span className="text-zinc-900 font-medium">
               SaaS teams selling to enterprise customers
             </span>
-            . It helps you reuse consistent, source-backed answers that security
-            reviewers can verify.
+            . It helps teams reuse consistent, source-backed answers that
+            security reviewers can actually verify.
           </p>
 
-          <div className="mt-7">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
-            >
-              Run a pilot security questionnaire
-            </Link>
-          </div>
-
-          <p className="mt-4 text-xs leading-5 text-zinc-500">
+          <p className="mt-10 text-sm text-zinc-500">
             Early-stage product. Used in pilot evaluations with SaaS teams.
           </p>
         </div>
       </section>
 
-      {/* SCROLL NARRATIVE: PROBLEM */}
-      <section className="mx-auto max-w-6xl px-6 pb-4 pt-6">
+      {/* STATEMENT MOMENT */}
+      <section className="mx-auto max-w-6xl px-6 pb-28">
+        <h2 className="max-w-4xl text-2xl leading-relaxed font-medium text-zinc-900">
+          Deals don’t slow down because controls are missing.<br />
+          They slow down because answers are unclear.
+        </h2>
+      </section>
+
+      {/* SCROLL NARRATIVE */}
+      <section className="mx-auto max-w-6xl px-6 pb-32">
         <ScrollNarrative
           eyebrow="The problem"
-          stickyTitle="Why enterprise security reviews slow down deals"
-          stickyBody="Deals rarely stall because controls are missing. They stall because answers are unclear, inconsistent, or hard to verify."
+          stickyTitle="Why enterprise security reviews create friction"
+          stickyBody="The same issues repeat across companies, deals, and questionnaires."
           steps={[
             {
               title: "Manual copy-paste",
-              body: "Answers live across spreadsheets, docs, and old questionnaires. Every deal restarts the same work.",
+              body: "Answers live across documents, spreadsheets, and old questionnaires. Each deal restarts the work.",
             },
             {
-              title: "Inconsistent answers",
-              body: "Similar questions get different wording, which raises doubts during review.",
+              title: "Inconsistent wording",
+              body: "Similar questions receive different answers, which raises doubts during review.",
             },
             {
               title: "Reviewer back-and-forth",
-              body: "Clarification requests pile up, slowing late-stage sales.",
+              body: "Clarification requests slow down late-stage deals.",
             },
             {
               title: "Lost momentum",
-              body: "Security reviews pause the deal while teams chase approvals internally.",
+              body: "Security reviews pause progress while teams chase internal approvals.",
             },
           ]}
         />
       </section>
 
       {/* TRANSFORMATION */}
-      <section className="mx-auto max-w-6xl px-6 pb-6 pt-6">
+      <section className="mx-auto max-w-6xl px-6 pb-32">
         <TransformationScroll
           eyebrow="What changes"
           stickyTitle="From scattered answers to a single source of truth"
-          stickyBody="As teams answer real questionnaires, the same friction appears — until answers are owned, reused, and clearly sourced."
+          stickyBody="The moment answers are owned and reused, the conversation changes."
           before={[
             "Copy-paste across documents",
             "Different answers to the same question",
-            "Late-stage Slack escalations",
+            "Late-stage escalations",
             "Clarification emails from reviewers",
           ]}
           after={[
@@ -93,11 +93,11 @@ export default function Page() {
       </section>
 
       {/* PRODUCT FLOW */}
-      <section className="mx-auto max-w-6xl px-6 pb-12 pt-8">
+      <section className="mx-auto max-w-6xl px-6 pb-36">
         <FlowSteps
           eyebrow="How it works"
           title="How VendorQ fits into a real deal"
-          subtitle="A simple workflow designed for real enterprise security reviews."
+          subtitle="A calm workflow designed for real enterprise security reviews."
           steps={[
             {
               step: "Step 1",
@@ -123,23 +123,24 @@ export default function Page() {
         />
       </section>
 
-      {/* CTA */}
-      <section className="mx-auto max-w-6xl px-6 pb-20 pt-8">
+      {/* CTA — NATURAL CONCLUSION */}
+      <section className="mx-auto max-w-6xl px-6 pb-40">
         <div className="max-w-3xl">
-          <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-            The next step is simple: run one real questionnaire.
+          <h2 className="text-3xl leading-tight font-semibold">
+            The next step is simple.
           </h2>
-          <p className="mt-3 text-sm leading-6 text-zinc-600">
-            If security questionnaires regularly slow down your deals, we can
-            evaluate VendorQ on a real customer file.
+
+          <p className="mt-4 text-base leading-7 text-zinc-600">
+            Run one real security questionnaire and evaluate VendorQ
+            in an actual sales context.
           </p>
 
-          <div className="mt-6">
+          <div className="mt-10">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-zinc-900 focus:ring-offset-2"
+              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2.5 text-sm font-medium text-white hover:bg-zinc-800"
             >
-              Run a pilot security questionnaire
+              Start a free pilot questionnaire
             </Link>
           </div>
         </div>
